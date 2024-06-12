@@ -24,7 +24,7 @@
           alt="main_logo"
         />
         <span class="ms-1 font-weight-bold text-white"
-          >Material Dashboard 2 PRO</span
+          >Clouduck</span
         >
       </router-link>
     </div>
@@ -33,14 +33,14 @@
   </aside>
 </template>
 <script>
-import SidenavList from "./SidenavList.vue";
+// import SidenavList from "./SidenavList.vue";
 import logo from "@/assets/img/logo-ct.png";
 import logoDark from "@/assets/img/logo-ct-dark.png";
 import { mapState } from "vuex";
 export default {
   name: "Index",
   components: {
-    SidenavList,
+    // SidenavList,
   },
   data() {
     return {

@@ -6,9 +6,9 @@
     <ul class="navbar-nav">
       <li class="nav-item" :class="getRoute() === 'dashboards' ? 'active' : ''">
         <sidenav-collapse
-          collapse-ref="brooklynAlice"
-          nav-text="Brooklyn Alice"
-          :class="getRoute() === 'brooklynAlice' ? 'active' : ''"
+          collapse-ref="Alice"
+          nav-text=" Alice"
+          :class="getRoute() === 'Alice' ? 'active' : ''"
         >
           <template #icon>
             <img src="../../assets/img/team-3.jpg" class="avatar" />
@@ -70,6 +70,7 @@
           PAGES
         </h6>
       </li>
+      
       <li class="nav-item" :class="getRoute() === 'dashboards' ? 'active' : ''">
         <sidenav-collapse
           collapse-ref="pagesExamples"
@@ -796,14 +797,14 @@
 </template>
 <script>
 import SidenavItem from "./SidenavItem.vue";
-import SidenavCollapse from "./SidenavCollapse.vue";
+// import SidenavCollapse from "./SidenavCollapse.vue";
 import SidenavCollapseItem from "./SidenavCollapseItem.vue";
 import { mapState } from "vuex";
 export default {
   name: "SidenavList",
   components: {
     SidenavItem,
-    SidenavCollapse,
+    // SidenavCollapse,
     SidenavCollapseItem
   },
   data() {

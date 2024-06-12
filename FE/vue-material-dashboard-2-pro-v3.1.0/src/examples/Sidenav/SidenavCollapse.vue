@@ -8,19 +8,19 @@
     v-bind="$attrs"
     @click="isExpanded = !isExpanded"
   >
-    <div
+    <!-- <div
       class="text-center d-flex align-items-center justify-content-center"
       :class="isRTL ? ' ms-2' : 'me-2'"
     >
       <slot name="icon"></slot>
-    </div>
+    </div> -->
     <span class="nav-link-text" :class="isRTL ? ' me-1' : 'ms-1'">{{
       navText
     }}</span>
   </a>
-  <div :id="collapseRef" class="collapse">
+  <!-- <div :id="collapseRef" class="collapse">
     <slot name="list"></slot>
-  </div>
+  </div> -->
 </template>
 <script>
 import { mapState } from "vuex";
