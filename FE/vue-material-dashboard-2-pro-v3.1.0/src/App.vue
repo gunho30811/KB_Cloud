@@ -1,17 +1,3 @@
-<!--
-=========================================================
-* Vue Material Dashboard 2 PRO - v3.1.0
-=========================================================
-
-* Product Page: https://creative-tim.com/product/vue-material-dashboard-2-pro
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <template>
   <sidenav
     v-if="showSidenav"
@@ -36,48 +22,53 @@ Coded by www.creative-tim.com
     />
   </main>
 </template>
+
 <script>
-import Sidenav from "./examples/Sidenav";
-import Configurator from "@/examples/Configurator.vue";
-import Navbar from "@/examples/Navbars/Navbar.vue";
-import AppFooter from "@/examples/Footer.vue";
-import { mapMutations, mapState } from "vuex";
+// import Sidenav from "./examples/Sidenav.vue";
+// import Configurator from "@/examples/Configurator.vue";
+// import Navbar from "@/examples/Navbars/Navbar.vue";
+// import AppFooter from "@/examples/Footer.vue";
 
 export default {
   name: "App",
   components: {
-    Sidenav,
-    Configurator,
-    Navbar,
-    AppFooter,
+    // Sidenav,
+    // Configurator,
+    // Navbar,
+    // AppFooter,
   },
-  computed: {
-    ...mapState([
-      "isRTL",
-      "color",
-      "isAbsolute",
-      "isNavFixed",
-      "navbarFixed",
-      "absolute",
-      "showSidenav",
-      "showNavbar",
-      "showFooter",
-      "showConfig",
-      "hideConfigButton",
-    ]),
+  data() {
+    return {
+      isRTL: false,
+      color: 'primary',
+      isAbsolute: false,
+      isNavFixed: false,
+      navbarFixed: 'fixed',
+      absolute: 'absolute',
+      showSidenav: true,
+      showNavbar: true,
+      showFooter: true,
+      showConfig: false,
+      hideConfigButton: false,
+    };
   },
   beforeMount() {
     const sidenav = document.getElementsByClassName("g-sidenav-show")[0];
-
     if (window.innerWidth > 1200) {
       sidenav.classList.add("g-sidenav-pinned");
     }
   },
   methods: {
-    ...mapMutations(["toggleConfigurator", "navbarMinimize"]),
+    toggleConfigurator() {
+      this.showConfig = !this.showConfig;
+    },
+    navbarMinimize() {
+      this.isNavFixed = !this.isNavFixed;
+    },
   },
 };
 </script>
+
 <style>
 .dataTable-pagination-list .active a {
   background-image: linear-gradient(
