@@ -8,6 +8,12 @@ import VueSweetalert2 from "vue-sweetalert2";
 import MaterialDashboard from "./material-dashboard";
 
 const appInstance = createApp(App);
+
+if (process.env.NODE_ENV === 'development') {
+    appInstance.config.devtools = true;
+  }
+
+  
 appInstance.use(store);
 appInstance.use(router);
 appInstance.use(VueSweetalert2);
