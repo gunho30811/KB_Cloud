@@ -34,8 +34,6 @@ import ChannelsChartCard from "@/components/ChannelsChartCard.vue";
 import RevenueChartCard from "@/components/RevenueChartCard.vue";
 import OrdersListCard from "@/examples/Cards/OrdersListCard.vue";
 
-// images
-import setTooltip from "@/assets/js/tooltip.js";
 
 export default {
   name: "Sales",
@@ -83,7 +81,6 @@ export default {
     };
   },
   mounted() {
-    setTooltip(this.$store.state.bootstrap);
   },
 };
 </script>
