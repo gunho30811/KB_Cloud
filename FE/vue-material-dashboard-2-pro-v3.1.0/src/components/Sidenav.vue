@@ -20,10 +20,11 @@
                 ? logoDark
                 : logo
             "
-            class="navbar-brand-img h-100"
+            class="navbar-brand-img"
+            style="width:50px; margin-top: -10px;"
             alt="main_logo"
           />
-          <span class="ms-1 font-weight-bold text-white"
+          <span class="ms-2 font-weight-bold clouduck-text fs-4"
             >Clouduck</span
           >
         </router-link>
