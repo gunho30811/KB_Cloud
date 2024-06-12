@@ -34,14 +34,14 @@
   </template>
   
   <script>
-//   import SidenavList from "@/components/SidenavList.vue";
+  import SidenavList from "@/components/SidenavList.vue";
   import logo from "@/assets/img/logo-ct.png";
   import logoDark from "@/assets/img/logo-ct-dark.png";
   
   export default {
     name: "Sidenav",
     components: {
-    //   SidenavList,
+      SidenavList,
     },
     data() {
       return {
