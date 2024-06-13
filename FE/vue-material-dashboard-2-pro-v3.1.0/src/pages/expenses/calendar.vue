@@ -1,8 +1,7 @@
 <template>
-  <div class="d-flex">
+  <div class="container">
     <Sidenav />
-
-    <div class="py-4 container-fluid">
+    <div class="main-content py-4 container-fluid">
       <h1>Calendar</h1>
       <div class="row">
         <div class="col-xl-12">
@@ -33,3 +32,32 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidenav {
+  width: 200px; /* Adjusted to a smaller width */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 200px; /* Adjusted to match the sidebar width */
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .sidenav {
+    width: 100%;
+  }
+}
+</style>
