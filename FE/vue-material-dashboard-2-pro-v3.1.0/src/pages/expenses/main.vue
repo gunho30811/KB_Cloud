@@ -3,7 +3,7 @@
     <Sidenav />
 
     <!--자산 내역 그래프-->
-    <div class="py-4 container col-7">
+    <div class="py-4 container col-9">
       <h1>Main</h1>
       <div class="row">
         <div class="col-md-6">

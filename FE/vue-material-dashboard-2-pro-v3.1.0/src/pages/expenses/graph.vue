@@ -1,18 +1,20 @@
 <template>
   <div>
     <Sidenav />
-      <div class="main-content">
+      <div class="py-4 container col-9">
         <h1>Extenses Page</h1>
-        <!-- Account page content -->
       <div class="row">
-        <h4>지출 상세 내역 테이블</h4>    
+        <h5 class="mb-0">분류별 지출 내역</h5>
+        <p class="mb-0 text-sm">
+          분류별 지출 상세 내역을 확인하세요.
+        </p>
+        <br><br>
       </div>
     <div class="row">     
-      <div class="col-lg-6 col-sm-6 ">
-        <channels-chart-card />
-      </div>
-      <div class="col-lg-6 col-sm-6">
-        <revenue-chart-card />
+      <div class="col-12">
+        <div class="card w-100">
+          <channels-chart-card/>
+          </div>
       </div>
     </div>
 
@@ -21,8 +23,23 @@
         <orders-list-card
           title="분류별 지출 내역"
           :headers="['분류', '날짜', '자산', '금액', '메모']"
+          :options="['식비', '의료', '교통', '문화', '기타']"
           :lists="products"
         />
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <h5 class="mb-0">누적 지출 내역</h5>
+        <p class="mb-0 text-sm">
+          누적 지출 상세 내역을 확인하세요.
+        </p>
+        <br><br>
+      <div class="col-12">
+        <div class="card w-100">
+          <revenue-chart-card />
+        </div>
       </div>
     </div>
     <div class="mt-4 row">
@@ -30,6 +47,7 @@
         <orders-list-card
           title="월간 누적 지출 비교"
           :headers="['거래일자', '종목코드', '종목명', '구분', '거래수량', '거래단가', '거래금액', '수익률']"
+          :options="['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']"
           :lists="products"
         />
       </div>
@@ -47,21 +65,12 @@ import OrdersListCard from "@/examples/Cards/OrdersListCard.vue";
 
 
 export default {
-  name: "Sales",
+  name: "Graph",
   components: {
     Sidenav,
     ChannelsChartCard,
     RevenueChartCard,
     OrdersListCard,
-  },
-  data() {
-    return {
-      products: [
-        
-      ],
-    };
-  },
-  mounted() {
   },
 };
 </script>

@@ -1,7 +1,14 @@
 <template>
   <div class="mb-4 card">
-    <div class="pb-0 card-header">
+    <div class="pb-0 card-header d-flex justify-content-between align-items-center">
       <h5>{{ title }}</h5>
+      <div>
+        <select class="form-select form-select-sm">
+          <option v-for="(option, index) in options" :key="index" :value="option">
+            {{ option }}
+          </option>
+        </select>
+      </div>
     </div>
     <div class="px-0 pt-0 pb-2 card-body">
       <div class="p-0 table-responsive">
@@ -18,64 +25,6 @@
               </th>
             </tr>
           </thead>
-          <tbody>
-            <tr
-              v-for="(
-                { title: listTitle, order, values, info, image, icon }, index
-              ) in lists"
-              :key="index"
-            >
-              <td>
-                <div class="px-3 py-1 d-flex">
-                  <material-avatar
-                    :img="image"
-                    class="me-3"
-                    circular
-                    alt="avatar image"
-                  />
-                  <div class="d-flex flex-column justify-content-center">
-                    <h6 class="mb-0 text-sm">{{ listTitle }}</h6>
-                    <p class="mb-0 text-sm font-weight-bold text-secondary">
-                      <span class="text-success">{{ order }}</span>
-                      orders
-                    </p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <p class="text-center mb-0 text-sm font-weight-bold">
-                  {{ values[0] }}
-                </p>
-              </td>
-              <td class="text-sm align-middle">
-                <p class="text-center mb-0 text-sm font-weight-bold">
-                  {{ values[1] }}
-                </p>
-              </td>
-              <td class="align-middle text-center">
-                <div
-                  class="text-center px-3 py-1 d-flex justify-content-center align-items-center"
-                >
-                  <p class="mb-0 text-sm font-weight-bold">
-                    {{ values[2] }}
-                  </p>
-                  <i class="mt-1 text-sm ms-1" :class="`ni ni-${icon}`"></i>
-                  <material-button
-                    v-if="info"
-                    size="sm"
-                    color="secondary"
-                    variant="outline"
-                    class="btn-icon-only btn-rounded mb-0 ms-2 btn-sm d-flex align-items-center justify-content-center ms-3"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="bottom"
-                    :data-bs-original-title="info"
-                  >
-                    <i class="fas fa-info" aria-hidden="true"></i>
-                  </material-button>
-                </div>
-              </td>
-            </tr>
-          </tbody>
         </table>
       </div>
     </div>
@@ -85,8 +34,6 @@
 <script>
 export default {
   name: "OrdersListCard",
-  components: {
-  },
   props: {
     title: {
       type: String,
@@ -95,6 +42,10 @@ export default {
     headers: {
       type: Array,
       default: () => [],
+    },
+    options: {
+      type: Array,
+      default: () => []
     },
     lists: {
       type: Array,
@@ -109,3 +60,19 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-select {
+  width: auto;
+}
+.form-select-sm {
+  font-size: .875rem;
+  line-height: 1.5;
+  border-radius: .2rem;
+}
+</style>
