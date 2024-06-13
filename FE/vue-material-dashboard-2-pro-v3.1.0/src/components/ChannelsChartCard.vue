@@ -4,8 +4,8 @@
       <div>
         <div class="card z-index-2">
           <div class="card-header p-3 pt-2">       
-            <h6 class="mb-0">Doughnut chart</h6>
-            <p class="mb-0 text-sm">Affiliates program</p>
+            <h6 class="mb-0">분류별 지출</h6>
+            <p class="mb-0 text-sm">분류별 지출 내역을 도넛 차트로 살펴보세요.</p>
           </div>
           <div class="p-3 card-body">
             <div class="card-body d-flex p-3 pt-0">
@@ -13,15 +13,15 @@
                 class="w-50"
                 :chart="{
                   labels: [
-                    'Dev.to',
-                    'Creative Tim',
-                    'Bootsnipp',
-                    'Github',
-                    'Codeinwp'
+                    '식비',
+                    '의료',
+                    '교통비',
+                    '생활용품',
+                    '기타'
                   ],
                   datasets: {
                     label: 'Projects',
-                    data: [15, 20, 12, 60, 20]
+                    data: [25, 13, 12, 37, 13]
                   }
                 }"
               />
@@ -31,13 +31,6 @@
                     <tr>
                       <td>
                         <div class="d-flex px-2 py-1">
-                          <div>
-                            <img
-                              src=""
-                              class="avatar avatar-sm me-2"
-                              alt="logo_xd"
-                            />
-                          </div>
                           <div
                             class="d-flex flex-column justify-content-center"
                           >
@@ -52,13 +45,6 @@
                     <tr>
                       <td>
                         <div class="d-flex px-2 py-1">
-                          <div>
-                            <img
-                              src=""
-                              class="avatar avatar-sm me-2"
-                              alt="logo_atlassian"
-                            />
-                          </div>
                           <div
                             class="d-flex flex-column justify-content-center"
                           >
@@ -73,13 +59,6 @@
                     <tr>
                       <td>
                         <div class="d-flex px-2 py-1">
-                          <div>
-                            <img
-                              src=""
-                              class="avatar avatar-sm me-2"
-                              alt="logo_slack"
-                            />
-                          </div>
                           <div
                             class="d-flex flex-column justify-content-center"
                           >
@@ -94,17 +73,10 @@
                     <tr>
                       <td>
                         <div class="d-flex px-2 py-1">
-                          <div>
-                            <img
-                              src=""
-                              class="avatar avatar-sm me-2"
-                              alt="logo_spotify"
-                            />
-                          </div>
                           <div
                             class="d-flex flex-column justify-content-center"
                           >
-                            <h6 class="mb-0 text-sm">기타</h6>
+                            <h6 class="mb-0 text-sm">생활용품</h6>
                           </div>
                         </div>
                       </td>
@@ -115,17 +87,10 @@
                     <tr>
                       <td>
                         <div class="d-flex px-2 py-1">
-                          <div>
-                            <img
-                              src=""
-                              class="avatar avatar-sm me-2"
-                              alt="logo_jira"
-                            />
-                          </div>
                           <div
                             class="d-flex flex-column justify-content-center"
                           >
-                            <h6 class="mb-0 text-sm">남은 돈</h6>
+                            <h6 class="mb-0 text-sm">기타</h6>
                           </div>
                         </div>
                       </td>
