@@ -33,6 +33,7 @@
         <ul class="mx-auto navbar-nav navbar-nav-hover">
           <li class="mx-2 nav-item dropdown dropdown-hover">
             <a
+              href="/expenses/account"
               id="dropdownMenuPages"
               role="button"
               class="cursor-pointer nav-link ps-2 d-flex justify-content-between align-items-center"
@@ -44,6 +45,7 @@
           </li>
           <li class="mx-2 nav-item dropdown dropdown-hover">
             <a
+              href="/expenses/calendar"
               id="dropdownMenuAccount"
               role="button"
               class="cursor-pointer nav-link ps-2 d-flex justify-content-between align-items-center"
@@ -55,6 +57,7 @@
           </li>
           <li class="mx-2 nav-item dropdown dropdown-hover">
             <a
+              href="/expenses/forms"
               id="dropdownMenuBlocks"
               role="button"
               class="cursor-pointer nav-link ps-2 d-flex justify-content-between align-items-center"
@@ -67,6 +70,7 @@
           </li>
           <li class="mx-2 nav-item dropdown dropdown-hover">
             <a
+              href="/expenses/graph"
               id="dropdownMenuDocs"
               role="button"
               class="cursor-pointer nav-link ps-2 d-flex justify-content-between align-items-center"
@@ -79,6 +83,7 @@
 
           <li class="mx-2 nav-item dropdown dropdown-hover">
             <a
+              href="/expenses/main"
               id="dropdownMenuDocs"
               role="button"
               class="cursor-pointer nav-link ps-2 d-flex justify-content-between align-items-center"
@@ -90,6 +95,7 @@
           </li>
           <li class="mx-2 nav-item dropdown dropdown-hover">
             <a
+              href="/invest/info"
               id="dropdownMenuDocs"
               role="button"
               class="cursor-pointer nav-link ps-2 d-flex justify-content-between align-items-center"
@@ -101,6 +107,7 @@
           </li>
           <li class="mx-2 nav-item dropdown dropdown-hover">
             <a
+              href="/invest/portfolio"
               id="dropdownMenuDocs"
               role="button"
               class="cursor-pointer nav-link ps-2 d-flex justify-content-between align-items-center"
