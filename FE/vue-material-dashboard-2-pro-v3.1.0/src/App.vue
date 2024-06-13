@@ -6,7 +6,7 @@
       :class="[isRTL ? 'fixed-end' : 'fixed-start']"
     />
     <main
-      style="margin-left: 250px;"
+      style="margin-left: auto;"
       class="main-content position-relative h-100 overflow-x-hidden"
     >
       <!-- nav -->
