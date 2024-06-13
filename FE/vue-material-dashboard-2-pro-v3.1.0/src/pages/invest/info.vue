@@ -9,6 +9,7 @@
       <div class="main-content">
         <BlogPostGrid />
       </div>
+      <NewsList />
     </div>
   </div>
 
@@ -18,11 +19,13 @@
 import Sidenav from "@/components/Sidenav.vue";
 import BlogPost from "@/components/BlogPost.vue";
 import BlogPostGrid from "@/components/BlogPostGrid.vue";
+import NewsList from "@/components/NewsList.vue";
+
 
 export default {
   name: "Portfolio",
   components: {
-    Sidenav, BlogPost, BlogPostGrid
+    Sidenav, BlogPost, BlogPostGrid, NewsList
   },
 };
 </script>
