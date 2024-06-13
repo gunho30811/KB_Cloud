@@ -36,7 +36,7 @@ export default {
   padding: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-width: 270px;
+  min-width: 263px;
   margin: 5px;
 }
 </style>

@@ -81,7 +81,7 @@ export default {
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 270px;
+  width: 150px;
 }
 h3 {
   font-size: 14px;
