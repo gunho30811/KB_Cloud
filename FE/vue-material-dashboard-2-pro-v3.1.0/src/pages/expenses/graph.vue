@@ -20,7 +20,7 @@
 
     <div class="mt-4 row">
       <div class="col-12">
-        <orders-list-card
+        <expenseList
           title="분류별 지출 내역"
           :headers="['분류', '날짜', '자산', '금액', '메모']"
           :options="['식료품', '의료', '교통', '취미', '전자제품', '의류', '편의점', '여행', '교육', '외식']"
@@ -44,7 +44,7 @@
     </div>
     <div class="mt-4 row">
       <div class="col-12">
-        <orders-list-card
+        <expenseList
           title="월간 누적 지출 비교"
           :headers="['거래일자', '종목코드', '종목명', '구분', '거래수량', '거래단가', '거래금액', '수익률']"
           :options="['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']"
@@ -61,7 +61,7 @@
 import Sidenav from "@/components/Sidenav.vue";
 import ChannelsChartCard from "@/components/ChannelsChartCard.vue";
 import RevenueChartCard from "@/components/RevenueChartCard.vue";
-import OrdersListCard from "@/examples/Cards/OrdersListCard.vue";
+import expenseList from "@/examples/Cards/expenseList.vue";
 
 
 export default {
@@ -70,7 +70,7 @@ export default {
     Sidenav,
     ChannelsChartCard,
     RevenueChartCard,
-    OrdersListCard,
+    expenseList,
   },
 };
 </script>

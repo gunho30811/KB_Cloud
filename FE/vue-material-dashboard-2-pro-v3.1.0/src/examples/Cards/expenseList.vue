@@ -40,7 +40,7 @@ onMounted(async () => {
 
 const fetchMembers = async () => {
 try {
-    const response = await axios.get('/api/members');
+    const response = await axios.get('/api/expenses');
     members.value = response.data;
 } catch (error) {
     console.error('Failed to fetch members:', error);

@@ -12,7 +12,7 @@ alias: {
 server: {
 proxy: {
     '/api': {
-    target: 'http://localhost:3001', // 수정: API 요청이 보내질 서버의 주소로 변경
+    target: 'http://localhost:3000', // 수정: API 요청이 보내질 서버의 주소로 변경
     changeOrigin: true,
     rewrite: (path) => path.replace(/^\/api/, '')
     }
