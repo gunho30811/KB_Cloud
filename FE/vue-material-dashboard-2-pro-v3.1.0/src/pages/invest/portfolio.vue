@@ -19,6 +19,7 @@ export default {
 
 <style scoped>
 .rate{
-  margin-left:120px ;
+  margin-top:50px;
+  margin-left:150px ;
 }
 </style>

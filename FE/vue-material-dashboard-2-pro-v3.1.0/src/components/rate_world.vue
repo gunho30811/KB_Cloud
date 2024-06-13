@@ -1,10 +1,10 @@
 <template>
-  <div id="rateW">
-    <div id="rate_world">
-      <Rate baseCurrency="USD" targetCurrency="KRW" />
-      <Rate baseCurrency="EUR" targetCurrency="KRW" />
-      <Rate baseCurrency="JPY" targetCurrency="KRW" />
-      <Rate baseCurrency="GBP" targetCurrency="KRW" />
+  <div>
+    <div class="row">
+      <Rate calss="col" baseCurrency="USD" targetCurrency="KRW" />
+      <Rate calss="col" baseCurrency="EUR" targetCurrency="KRW" />
+      <Rate calss="col" baseCurrency="JPY" targetCurrency="KRW" />
+      <Rate calss="col" baseCurrency="GBP" targetCurrency="KRW" />
     </div>
   </div>
 </template>
