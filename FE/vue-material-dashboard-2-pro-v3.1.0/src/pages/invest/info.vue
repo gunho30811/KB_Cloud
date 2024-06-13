@@ -1,18 +1,17 @@
 <template>
-  <div>
+  <div class="container">
     <Sidenav />
-    <div class="info">
-      <BlogPost :imageSrc="require('@/assets/img/drake.jpg')" category="Enterprise"
-        title="Siri brings hands-free TV to more devices"
-        description="Siri's latest trick is offering a hands-free TV viewing experience, that will allow consumers to turn on or off their television, change inputs, fast forward, rewind and more, without having to first invoke a specific skill, or even press a button on their remote."
-        buttonText="Read More" />
+    <div class="main-content">
+      <div class="py-4 container-fluid">
+        <h1>News</h1>
+      </div>
+      <BlogPost />
       <div class="main-content">
         <BlogPostGrid />
       </div>
       <NewsList />
     </div>
   </div>
-
 </template>
 
 <script>
@@ -20,7 +19,6 @@ import Sidenav from "@/components/Sidenav.vue";
 import BlogPost from "@/components/BlogPost.vue";
 import BlogPostGrid from "@/components/BlogPostGrid.vue";
 import NewsList from "@/components/NewsList.vue";
-
 
 export default {
   name: "Info",
