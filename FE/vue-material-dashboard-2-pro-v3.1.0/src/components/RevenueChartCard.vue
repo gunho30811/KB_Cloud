@@ -3,7 +3,7 @@
     <div class="p-3 pb-0 card-header">
       <div class="d-flex justify-content-between">
         <h6 class="mb-0">누적 지출 그래프</h6>
-        <button
+        <!-- <button
           type="button"
           class="mb-0 btn btn-icon-only btn-rounded btn-outline-secondary ms-2 btn-sm d-flex align-items-center justify-content-center"
           data-bs-toggle="tooltip"
@@ -12,7 +12,7 @@
           data-bs-original-title="See which ads perform better"
         >
           <i class="fas fa-info" aria-hidden="true"></i>
-        </button>
+        </button> -->
       </div>
       <div class="d-flex align-items-center">
         <span class="badge badge-md badge-dot me-4">
