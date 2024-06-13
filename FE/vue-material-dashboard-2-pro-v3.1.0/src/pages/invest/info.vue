@@ -23,7 +23,7 @@ import NewsList from "@/components/NewsList.vue";
 
 
 export default {
-  name: "Portfolio",
+  name: "Info",
   components: {
     Sidenav, BlogPost, BlogPostGrid, NewsList
   },
