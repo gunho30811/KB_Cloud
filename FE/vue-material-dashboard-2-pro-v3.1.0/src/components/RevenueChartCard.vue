@@ -2,7 +2,7 @@
   <div class="card">
     <div class="p-3 pb-0 card-header">
       <div class="d-flex justify-content-between">
-        <h6 class="mb-0">Revenue</h6>
+        <h6 class="mb-0">누적 지출 그래프</h6>
         <button
           type="button"
           class="mb-0 btn btn-icon-only btn-rounded btn-outline-secondary ms-2 btn-sm d-flex align-items-center justify-content-center"
@@ -17,11 +17,11 @@
       <div class="d-flex align-items-center">
         <span class="badge badge-md badge-dot me-4">
           <i class="bg-danger"></i>
-          <span class="text-xs text-dark">Facebook Ads</span>
+          <span class="text-xs text-dark">이번 달</span>
         </span>
         <span class="badge badge-md badge-dot me-4">
           <i class="bg-dark"></i>
-          <span class="text-xs text-dark">Google Ads</span>
+          <span class="text-xs text-dark">저번 달</span>
         </span>
       </div>
     </div>
@@ -31,24 +31,22 @@
         title="Traffic channels"
         :chart="{
           labels: [
-            'Apr',
-            'May',
-            'Jun',
-            'Jul',
-            'Aug',
-            'Sep',
-            'Oct',
-            'Nov',
-            'Dec',
+            '1일',
+            '5일',
+            '10일',
+            '15일',
+            '20일',
+            '25일',
+            '30일',
           ],
           datasets: [
             {
               label: 'Organic Search',
-              data: [50, 100, 200, 190, 400, 350, 500, 450, 700],
+              data: [50, 100, 120, 190, 400, 500, 700],
             },
             {
               label: 'Google Ads',
-              data: [10, 30, 40, 120, 150, 220, 280, 250, 280],
+              data: [10, 30, 40, 120, 150, 220, 280],
             },
           ],
         }"

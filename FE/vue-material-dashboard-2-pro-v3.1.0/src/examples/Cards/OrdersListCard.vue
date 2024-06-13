@@ -19,7 +19,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr
+            <!-- <tr
               v-for="(
                 { title: listTitle, order, values, info, image, icon }, index
               ) in lists"
@@ -74,7 +74,7 @@
                   </material-button>
                 </div>
               </td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>
@@ -83,13 +83,9 @@
 </template>
 
 <script>
-import MaterialAvatar from "@/components/MaterialAvatar.vue";
-import MaterialButton from "@/components/MaterialButton.vue";
 export default {
   name: "OrdersListCard",
   components: {
-    MaterialAvatar,
-    MaterialButton,
   },
   props: {
     title: {

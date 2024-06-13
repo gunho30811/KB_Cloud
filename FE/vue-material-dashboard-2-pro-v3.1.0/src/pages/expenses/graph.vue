@@ -1,18 +1,21 @@
 <template>
-  <div class="py-4 container-fluid">
-    <div class="mt-4 row">
-      <div class="col-lg-4 col-sm-6">
+  <div>
+    <Sidenav />
+    <div class="py-4 container-fluid">
+    <div class="mt-4 row">     
+      <div class="col-lg-4 col-sm-6 ">
         <channels-chart-card />
       </div>
-      <div class="mt-4 col-lg-8 col-sm-6 mt-sm-0">
+      <div class="col-lg-8 col-sm-6 mt-sm-0">
         <revenue-chart-card />
       </div>
     </div>
+
     <div class="mt-4 row">
       <div class="col-12">
         <orders-list-card
-          title="Top Selling Products"
-          :headers="['Product', 'Value', 'Ads Spent', 'Refunds']"
+          title="분류별 지출 내역"
+          :headers="['분류', '날짜', '자산', '금액', '메모']"
           :lists="products"
         />
       </div>
@@ -20,16 +23,19 @@
     <div class="mt-4 row">
       <div class="col-12">
         <orders-list-card
-          title="Top Selling Products"
-          :headers="['Product', 'Value', 'Ads Spent', 'Refunds']"
+          title="월간 누적 지출 비교"
+          :headers="['거래일자', '종목코드', '종목명', '구분', '거래수량', '거래단가', '거래금액', '수익률']"
           :lists="products"
         />
       </div>
     </div>
   </div>
+  </div>
+  
 </template>
 
 <script>
+import Sidenav from "@/components/Sidenav.vue";
 import ChannelsChartCard from "@/components/ChannelsChartCard.vue";
 import RevenueChartCard from "@/components/RevenueChartCard.vue";
 import OrdersListCard from "@/examples/Cards/OrdersListCard.vue";
@@ -38,6 +44,7 @@ import OrdersListCard from "@/examples/Cards/OrdersListCard.vue";
 export default {
   name: "Sales",
   components: {
+    Sidenav,
     ChannelsChartCard,
     RevenueChartCard,
     OrdersListCard,

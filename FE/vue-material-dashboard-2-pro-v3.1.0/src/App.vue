@@ -1,26 +1,28 @@
 <template>
-  <sidenav
-    v-if="showSidenav"
-    :custom_class="color"
-    :class="[isRTL ? 'fixed-end' : 'fixed-start']"
-  />
-  <main
-    class="main-content position-relative max-height-vh-100 h-100 overflow-x-hidden"
-  >
-    <!-- nav -->
-    <navbar
-      v-if="showNavbar"
-      :class="[isNavFixed ? navbarFixed : '', isAbsolute ? absolute : '']"
-      :color="isAbsolute ? 'text-white opacity-8' : ''"
-      :min-nav="navbarMinimize"
+  <div class="container">
+    <sidenav
+      v-if="showSidenav"
+      :custom_class="color"
+      :class="[isRTL ? 'fixed-end' : 'fixed-start']"
     />
-    <router-view />
-    <app-footer v-show="showFooter" />
-    <configurator
-      :toggle="toggleConfigurator"
-      :class="[showConfig ? 'show' : '', hideConfigButton ? 'd-none' : '']"
-    />
-  </main>
+    <main
+      class="main-content position-relative max-height-vh-100 h-100 overflow-x-hidden"
+    >
+      <!-- nav -->
+      <navbar
+        v-if="showNavbar"
+        :class="[isNavFixed ? navbarFixed : '', isAbsolute ? absolute : '']"
+        :color="isAbsolute ? 'text-white opacity-8' : ''"
+        :min-nav="navbarMinimize"
+      />
+      <router-view />
+      <app-footer v-show="showFooter" />
+      <configurator
+        :toggle="toggleConfigurator"
+        :class="[showConfig ? 'show' : '', hideConfigButton ? 'd-none' : '']"
+      />
+    </main>
+  </div>
 </template>
 
 <script>
