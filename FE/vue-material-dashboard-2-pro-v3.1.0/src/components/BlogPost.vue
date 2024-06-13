@@ -7,7 +7,7 @@
         <p class="category">{{ category }}</p>
         <h2 class="title">{{ title }}</h2>
         <p class="description">{{ description }}</p>
-        <button class="read-more-btn">{{ buttonText }}</button>
+        <button v-if="buttonText" class="read-more-btn">{{ buttonText }}</button>
       </div>
     </div>
   </template>
@@ -34,7 +34,7 @@
       },
       buttonText: {
         type: String,
-        default: "Read More"
+        default: null
       }
     }
   };
@@ -50,7 +50,7 @@
   }
   
   .blog-post-image img {
-    width: 50%;
+    width: 100%;
     height: auto;
   }
   
