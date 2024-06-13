@@ -152,7 +152,10 @@
             <!--환율-->
             <div>
                 <br><br><h5 class="mb-0">환율</h5>
-                <Rate-world />
+                <div style="margin-left: 40px">
+                  <Rate-world />
+                </div>
+                
                 
             </div>
 
