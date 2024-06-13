@@ -1,11 +1,12 @@
 <template lang="">
-    <div
+  <navbar />
+  <div
     class="page-header bg-gradient-dark position-relative m-3 border-radius-xl min-vh-50"
   >
     <img
       src="@/assets/img/banner.png"
       alt="pattern-lines"
-      class="page-header top-0 position-absolute opacity-8 start-0 w-200"
+      class="page-header top-0 position-absolute opacity-8 start-0 w-100"
     />
     <span class="mask bg-gradient-dark opacity-2"></span>
     <div class="container py-3 postion-relative z-index-2">
@@ -25,15 +26,19 @@
           <div class="col-lg-12 position-relative z-index-2">
             <h5 class="mb-0">지출</h5><br>
             <div class="row">
-                <div class="col-lg-4 col-sm-6">
+              <div class="col-lg-6 col-sm-6 d-flex align-items-stretch">
+                <div class="card w-100 d-flex justify-content-center align-items-center">
                   <channels-chart-card />
                 </div>
-                <div class="col-lg-8 col-sm-6 mt-sm-0">
+              </div>
+              <div class="col-lg-6 col-sm-6 d-flex align-items-stretch">
+                <div class="card w-100">
                   <revenue-chart-card />
                 </div>
               </div>
+            </div>
 
-              <br><br>
+            <br><br>
               
 
             <!-- 자산 내역 그래프-->
@@ -100,7 +105,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                   <mini-statistics-card
                     :title="{ text: '수입', value: 350 }"
-                    detail="<span class='text-success text-sm font-weight-bolder'>+2%</span> than last week"
+                    detail="저번 달보다 <span class='text-success text-sm font-weight-bolder'>+2%</span>"
                     :icon="{
                       name: 'person',
                       color: 'text-white',
@@ -111,7 +116,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
                   <mini-statistics-card
                     :title="{ text: '지출', value: '200' }"
-                    detail="저번 달 보다 <span class='text-success text-sm font-weight-bolder'>-5.4%</span>"
+                    detail="저번 달보다 <span class='text-success text-sm font-weight-bolder'>-5.4%</span>"
                     :icon="{
                       name: 'person',
                       color: 'text-white',
@@ -122,7 +127,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
                   <mini-statistics-card
                     :title="{ text: '미국 주식', value: '$2,300' }"
-                    detail="저번 달 보다 <span class='text-success text-sm font-weight-bolder'>+9%</span>"
+                    detail="저번 달보다 <span class='text-success text-sm font-weight-bolder'>+9%</span>"
                     :icon="{
                       name: 'leaderboard',
                       color: 'text-white',
@@ -133,7 +138,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
                   <mini-statistics-card
                     :title="{ text: '한국 주식', value: '3490000' }"
-                    detail="저번 달 보다 <span class='text-success text-sm font-weight-bolder'>+5%</span>"
+                    detail="저번 달보다 <span class='text-success text-sm font-weight-bolder'>+5%</span>"
                     :icon="{
                       name: 'leaderboard',
                       color: 'text-white',
@@ -158,6 +163,7 @@ import ChannelsChartCard from "@/components/ChannelsChartCard.vue";
 import RevenueChartCard from "@/components/RevenueChartCard.vue";
 import DefaultLineChart from "@/components/DefaultLineChart.vue";
 import MiniStatisticsCard from "@/components/MiniStatisticsCard.vue";
+import Navbar from "@/components/Navbar.vue";
 
 export default {
   name: "Home",
@@ -166,6 +172,7 @@ export default {
     RevenueChartCard,
     DefaultLineChart,
     MiniStatisticsCard,
+    Navbar,
   },
   
 };
