@@ -6,7 +6,8 @@
       :class="[isRTL ? 'fixed-end' : 'fixed-start']"
     />
     <main
-      class="main-content position-relative max-height-vh-100 h-100 overflow-x-hidden"
+      style="margin-left: 250px;"
+      class="main-content position-relative h-100 overflow-x-hidden"
     >
       <!-- nav -->
       <navbar
@@ -79,4 +80,6 @@ export default {
     #43a047 100%
   ) !important;
 }
+
+
 </style>

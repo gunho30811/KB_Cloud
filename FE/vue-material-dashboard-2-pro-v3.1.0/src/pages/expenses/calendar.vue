@@ -1,8 +1,6 @@
 <template>
   <div class="d-flex">
     <Sidenav />
-    <div class="main-content">
-    </div>
 
     <div class="py-4 container-fluid">
       <h1>Calendar</h1>
