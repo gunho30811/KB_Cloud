@@ -46,10 +46,10 @@ export default {
           {
             label: this.chart.datasets.label,
             weight: 9,
-            cutout: 20,
+            cutout: 60,
             tension: 0.9,
             pointRadius: 2,
-            borderWidth: 1,
+            borderWidth: 2,
             backgroundColor: [
               "#03A9F4",
               "#3A416F",

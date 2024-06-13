@@ -7,11 +7,11 @@
       <div class="row">
         <h4>지출 상세 내역 테이블</h4>    
       </div>
-    <div class="mt-4 row">     
-      <div class="col-lg-4 col-sm-6 ">
+    <div class="row">     
+      <div class="col-lg-6 col-sm-6 ">
         <channels-chart-card />
       </div>
-      <div class="col-lg-8 col-sm-6 mt-sm-0">
+      <div class="col-lg-6 col-sm-6">
         <revenue-chart-card />
       </div>
     </div>
