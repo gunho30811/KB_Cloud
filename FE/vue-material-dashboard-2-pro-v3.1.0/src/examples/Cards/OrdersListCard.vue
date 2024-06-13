@@ -1,7 +1,7 @@
 <template>
   <div class="mb-4 card">
     <div class="pb-0 card-header">
-      <h6>{{ title }}</h6>
+      <h5>{{ title }}</h5>
     </div>
     <div class="px-0 pt-0 pb-2 card-body">
       <div class="p-0 table-responsive">
@@ -14,7 +14,8 @@
                 :class="index >= 1 ? 'text-center ps-2' : ''"
                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
               >
-                {{ header }}
+
+                <h6>{{ header }}</h6>
               </th>
             </tr>
           </thead>

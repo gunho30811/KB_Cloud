@@ -1,6 +1,7 @@
 <template>
   <div>
     <Sidenav />
+    <h1>Extenses Page</h1>
     <div class="py-4 container-fluid">
     <div class="mt-4 row">     
       <div class="col-lg-4 col-sm-6 ">
