@@ -3,7 +3,7 @@
     <Sidenav />
 
     <!--자산 내역 그래프-->
-    <div class="main-content py-4 container-fluid">
+    <div class="main-content py-4 container-fluid col-9">
       <h1>Main</h1>
       <div class="row">
         <div class="col-md-6">
@@ -19,6 +19,7 @@
         </div>
 
       <!--수입/지출 상세 내역-->
+      
       <div class="py-4 container-fluid">
         <div class="col-md-6">
           <br /><br />
@@ -214,14 +215,12 @@
 
 <script>
 import Sidenav from "@/components/Sidenav.vue";
-import DefaultLineChart from "@/components/DefaultLineChart.vue";
 import AssetGraph from "@/components/AssetGraph.vue";
 
 export default {
   name: "MainPage",
   components: {
     Sidenav,
-    DefaultLineChart,
     AssetGraph,
   },
 };

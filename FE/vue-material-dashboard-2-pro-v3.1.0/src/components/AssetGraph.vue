@@ -51,7 +51,7 @@
   </template>
   
   <script>
-    import DefaultLineChart from "@/components/DefaultLineChart.vue";
+  import DefaultLineChart from "@/components/DefaultLineChart.vue";
   
   export default {
     name: "AssetGraph",

@@ -6,10 +6,6 @@
       <div class="news-item-content">
         <h2 class="title">{{ title }}</h2>
         <p class="description">{{ description }}</p>
-        <div class="author-info">
-          <img class="author-avatar" :src="authorAvatar" alt="Author avatar" />
-          <span class="author-name">{{ authorName }}</span>
-        </div>
       </div>
     </div>
   </template>
@@ -30,14 +26,6 @@
         type: String,
         required: true
       },
-      authorName: {
-        type: String,
-        required: true
-      },
-      authorAvatar: {
-        type: String,
-        required: true
-      }
     }
   };
   </script>
@@ -72,22 +60,13 @@
   .description {
     color: #777;
     margin-bottom: 10px;
-  }
-  
-  .author-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .author-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .author-name {
-    font-weight: bold;
+    text-overflow: ellipsis; /* 3줄 넘어가면 ... 처리 */
+    overflow: hidden;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    max-height: 4.5rem; 
   }
   </style>
   
