@@ -1,24 +1,15 @@
 <template>
-  <div>
-    <Sidenav />
-  </div>
-
+    <RateWorld/>
 </template>
 
 <script>
-import Sidenav from "@/components/Sidenav.vue";
+import RateWorld from "@/components/rate_world.vue";
 
 export default {
-  name: "Account",
+  name: 'portfolio,vue',
   components: {
-    Sidenav,
-  },
+    RateWorld
+  }
 };
 </script>
 
-<style scoped>
-.main-content {
-  margin-left: 250px;
-  padding: 20px;
-}
-</style>
