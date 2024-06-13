@@ -6,7 +6,7 @@
         <h1>News</h1>
       </div>
       <BlogPost />
-      <div class="main-content">
+      <div class="">
         <BlogPostGrid />
       </div>
       <NewsList />
