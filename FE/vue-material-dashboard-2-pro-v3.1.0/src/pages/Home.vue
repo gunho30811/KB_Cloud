@@ -151,7 +151,12 @@
 
             <!--환율-->
             <div>
-                <br><br><h5 class="mb-0">환율</h5><br>
+                <br><br><h5 class="mb-0">환율</h5>
+                <div style="margin-left: 40px">
+                  <Rate-world />
+                </div>
+                
+                
             </div>
 
         </div>
@@ -164,6 +169,7 @@ import RevenueChartCard from "@/components/RevenueChartCard.vue";
 import DefaultLineChart from "@/components/DefaultLineChart.vue";
 import MiniStatisticsCard from "@/components/MiniStatisticsCard.vue";
 import Navbar from "@/components/Navbar.vue";
+import RateWorld from "@/components/rate_world.vue";
 
 export default {
   name: "Home",
@@ -173,6 +179,7 @@ export default {
     DefaultLineChart,
     MiniStatisticsCard,
     Navbar,
+    RateWorld,
   },
   
 };

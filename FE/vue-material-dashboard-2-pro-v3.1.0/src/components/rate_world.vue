@@ -1,10 +1,10 @@
 <template>
-  <div id="rateW">
-    <div id="rate_world">
-      <Rate baseCurrency="USD" targetCurrency="KRW" />
-      <Rate baseCurrency="EUR" targetCurrency="KRW" />
-      <Rate baseCurrency="JPY" targetCurrency="KRW" />
-      <Rate baseCurrency="GBP" targetCurrency="KRW" />
+  <div>
+    <div class="row">
+      <Rate calss="col" baseCurrency="USD" targetCurrency="KRW" />
+      <Rate calss="col" baseCurrency="EUR" targetCurrency="KRW" />
+      <Rate calss="col" baseCurrency="JPY" targetCurrency="KRW" />
+      <Rate calss="col" baseCurrency="GBP" targetCurrency="KRW" />
     </div>
   </div>
 </template>
@@ -36,7 +36,7 @@ export default {
   padding: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-width: 270px;
+  min-width: 263px;
   margin: 5px;
 }
 </style>
