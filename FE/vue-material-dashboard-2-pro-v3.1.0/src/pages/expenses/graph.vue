@@ -1,8 +1,12 @@
 <template>
   <div>
     <Sidenav />
-    <h1>Extenses Page</h1>
-    <div class="py-4 container-fluid">
+      <div class="main-content">
+        <h1>Extenses Page</h1>
+        <!-- Account page content -->
+      <div class="row">
+        <h4>지출 상세 내역 테이블</h4>    
+      </div>
     <div class="mt-4 row">     
       <div class="col-lg-4 col-sm-6 ">
         <channels-chart-card />
