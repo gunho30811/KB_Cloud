@@ -14,21 +14,28 @@
       <div class="card">
         <div class="card-body">
           <div class="row mt-4">
-            <div class="col-4">
+            <div class="col-3">
               <material-input
                 id="collection"
                 variant="dynamic"
                 label="날짜"
               />
             </div>
-            <div class="col-4">
+            <div class="col-3">
               <material-input id="price" variant="dynamic" label="자산" />
             </div>
-            <div class="col-4">
+            <div class="col-3">
               <material-input
                 id="quantity"
                 variant="dynamic"
                 label="금액"
+              />
+            </div>
+            <div class="col-3">
+              <material-input
+                id="quantity"
+                variant="dynamic"
+                label="분류"
               />
             </div>
           </div>
