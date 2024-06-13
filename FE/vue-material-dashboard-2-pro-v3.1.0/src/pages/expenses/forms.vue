@@ -19,7 +19,9 @@
                 id="collection"
                 variant="dynamic"
                 label="날짜"
-              />
+              >
+              </material-input>
+              
             </div>
             <div class="col-3">
               <material-input id="price" variant="dynamic" label="자산" />
@@ -64,7 +66,7 @@
   import Quill from "quill";
   import Choices from "choices.js";
   import MaterialInput from "@/components/MaterialInput.vue";
-  
+
   export default {
     name: "Account",
     components: {

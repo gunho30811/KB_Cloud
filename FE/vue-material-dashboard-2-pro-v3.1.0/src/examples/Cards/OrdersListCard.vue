@@ -14,13 +14,12 @@
                 :class="index >= 1 ? 'text-center ps-2' : ''"
                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
               >
-
                 <h6>{{ header }}</h6>
               </th>
             </tr>
           </thead>
           <tbody>
-            <!-- <tr
+            <tr
               v-for="(
                 { title: listTitle, order, values, info, image, icon }, index
               ) in lists"
@@ -75,7 +74,7 @@
                   </material-button>
                 </div>
               </td>
-            </tr> -->
+            </tr>
           </tbody>
         </table>
       </div>

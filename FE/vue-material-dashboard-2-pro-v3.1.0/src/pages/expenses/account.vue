@@ -5,6 +5,15 @@
         <h1>Account Page</h1>
         <!-- Account page content -->          
       <div class="mt-4 row">
+        <div class="d-flex justify-content-end">
+            <button
+              type="button"
+              class="mt-2 mb-0 btn bg-gradient-success"
+              onclick="location.href='forms'"
+            >
+              추가
+            </button>
+          </div>
         <div class="col-12">
           <orders-list-card
             title="분류별 지출 내역"
