@@ -1,27 +1,21 @@
 <template>
-  <div>
+  <div class="container">
     <Sidenav />
-    <div class="py-4 container-fluid">
-      <h1>Account Page</h1>
-      <!-- Account page content -->          
-    <div class="mt-4 row">
-      <div class="d-flex justify-content-end">
-          <button
-            type="button"
-            class="mt-2 mb-0 btn bg-gradient-success"
-            onclick="location.href='forms'"
-          >
-            추가
-          </button>
+    <div class="main-content">
+      <div class="py-4 container-fluid">
+        <h1>Account Page</h1>
+        <!-- Account page content -->
+        <div class="mt-4 row">
+          <div class="d-flex justify-content-end">
+            <button type="button" class="mt-2 mb-0 btn bg-gradient-success" onclick="location.href='forms'">
+              추가
+            </button>
+          </div>
+          <div class="col-12">
+            <orders-list-card title="분류별 지출 내역" :headers="['분류', '날짜', '자산', '금액', '메모']" :lists="products" />
+          </div>
         </div>
-      <div class="col-12">
-        <orders-list-card
-          title="분류별 지출 내역"
-          :headers="['분류', '날짜', '자산', '금액', '메모']"
-          :lists="products"
-        />
       </div>
-    </div>
     </div>
   </div>
 </template>
@@ -40,8 +34,34 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidenav {
+  width: 200px; /* Adjusted to a smaller width */
+}
+
 .main-content {
-  margin-left: 250px; /* Adjust this value to match your sidebar width */
+  flex: 1;
   padding: 20px;
+  margin-left: 200px; /* Adjusted to match the sidebar width */
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .sidenav {
+    width: 100%;
+  }
+}
+
+.Account_box {
+  margin-left: 20px; /* Adjusted to a smaller margin */
 }
 </style>
