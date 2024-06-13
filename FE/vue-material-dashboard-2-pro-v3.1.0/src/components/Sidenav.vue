@@ -14,7 +14,7 @@
         <img
           :src="(sidebarType === 'bg-white' || (sidebarType === 'bg-transparent' && !isDarkMode)) ? logoDark : logo"
           class="navbar-brand-img"
-          style="width:50px; margin-top: -10px;"
+          style="width:45px; margin-top: -10px;"
           alt="main_logo"
         />
         <span class="ms-2 font-weight-bold clouduck-text fs-4 text-white">Clouduck</span>
@@ -41,7 +41,7 @@ export default {
       logoDark,
       isRTL: false, // 로컬 상태로 변경
       sidebarType: 'bg-white', // 로컬 상태로 변경
-      isDarkMode: false, // 로컬 상태로 변경
+      isDarkMode: true, // 로컬 상태로 변경
     };
   },
 };
@@ -52,7 +52,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 95vh;
-  background-color: #282d33; /* 다크 모드 배경색 */
+  background: linear-gradient(to bottom, #282d33 0%, #323843 100%);
   color: white; /* 다크 모드 텍스트 색상 */
 }
 
@@ -61,7 +61,11 @@ export default {
 }
 
 .clouduck-text {
+  font-family: 'Playfair Display', serif;
   color: white; /* 다크 모드 텍스트 색상 */
+  font-size: 1.6rem; /* 텍스트 크기 조정 */
+  font-weight: 700; /* 텍스트 굵기 조정 */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* 텍스트에 그림자 효과 추가 */
 }
 
 .main-content {
