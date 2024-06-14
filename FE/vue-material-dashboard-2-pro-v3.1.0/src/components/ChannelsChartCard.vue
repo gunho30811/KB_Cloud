@@ -109,12 +109,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import DoughnutChart from "@/examples/Charts/DoughnutChart.vue";
-export default {
-  name: "ChannelsChartCard",
-  components: {
-    DoughnutChart
-  },
-};
+
 </script>
