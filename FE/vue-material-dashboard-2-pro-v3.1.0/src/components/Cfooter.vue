@@ -30,7 +30,6 @@ export default {
 
 <style scoped>
 .footer {
-  border-top: 1px solid #ddd;
   padding: 20px 0;
 }
 

@@ -110,6 +110,7 @@
                 
                 
             </div>
+          <Cfooter/>
 
         </div>
         <div class="row"></div>
@@ -122,6 +123,7 @@ import MiniStatisticsCard from "@/components/MiniStatisticsCard.vue";
 import Navbar from "@/components/Navbar.vue";
 import RateWorld from "@/components/rate_world.vue";
 import AssetGraph from "@/components/AssetGraph.vue";
+import Cfooter from "@/components/Cfooter.vue";
 
 export default {
   name: "Home",
@@ -132,6 +134,7 @@ export default {
     MiniStatisticsCard,
     Navbar,
     RateWorld,
+    Cfooter
   },
   
 };
