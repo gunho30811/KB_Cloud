@@ -30,12 +30,7 @@
         </div>
         <div class="mt-4 row">
           <div class="col-12">
-            <expenseList
-              title="분류별 지출 내역"
-              :headers="['분류', '날짜', '자산', '금액', '메모']"
-              :options="['식료품', '의료', '교통', '취미', '전자제품', '의류', '편의점', '여행', '교육', '외식']"
-              :lists="products"
-            />
+            <expenseList />
           </div>
         </div>
       </div>
@@ -50,12 +45,7 @@
         </div>
         <div class="mt-4 row">
           <div class="col-12">
-            <transactionList
-              title="분류별 지출 내역"
-              :headers="['분류', '날짜', '자산', '금액', '메모']"
-              :options="['식료품', '의료', '교통', '취미', '전자제품', '의류', '편의점', '여행', '교육', '외식']"
-              :lists="products"
-            />
+            <transactionList/>
           </div>
         </div>
       </div>
