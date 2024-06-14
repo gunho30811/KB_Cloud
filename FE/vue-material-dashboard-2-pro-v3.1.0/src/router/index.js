@@ -7,7 +7,8 @@ import Graph from '@/pages/expenses/graph.vue';
 import Main from '@/pages/expenses/main.vue';
 import Info from '@/pages/invest/info.vue';
 import Portfolio from '@/pages/invest/portfolio.vue';
-import List from '@/pages/List.vue'
+import sample from '@/pages/sample.vue'
+import sample2 from '@/pages/sample2.vue'
 
 
 const router = createRouter({
@@ -21,7 +22,9 @@ const router = createRouter({
     { path: '/expenses/main', name: 'Main', component: Main },
     { path: '/invest/info', name: 'Info', component: Info },
     { path: '/invest/portfolio', name: 'Portfolio', component: Portfolio },
-    { path: '/list', name: "List", component: List },
+    { path: '/sample', name: "sample", component: sample },
+    { path: '/sample2', name: "sample", component: sample2 },
+
   ]
 });
 
