@@ -23,11 +23,11 @@ export default {
     return {
       series: [
         {
-          name: "Sales",
+          name: "투자",
           data: [31, 40, 28, 51, 42, 109, 100],
         },
         {
-          name: "Goals",
+          name: "지출",
           data: [11, 32, 45, 32, 34, 52, 41],
         },
       ],
