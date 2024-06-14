@@ -24,12 +24,12 @@
                     >
                         <td>
                             <p class="text-center mb-0 text-sm font-weight-bold">
-                            {{ date }}
+                            {{ code }}
                             </p>
                         </td>
                         <td>
                             <p class="text-center mb-0 text-sm font-weight-bold">
-                                <span class="text-success">{{ code }}</span>
+                                <span class="text-success">{{ date }}</span>
                             </p>
                         </td>
                         <td>
@@ -92,7 +92,7 @@
 import {ref, onMounted, computed} from 'vue';
 import axios from 'axios';
 
-const headers = ['거래일자', '종목코드', '종목명', '구분', '거래수량', '거래단가', '거래금액', '수익률']
+const headers = ['종목코드', '거래일자', '종목명', '구분', '거래수량', '거래단가', '거래금액', '수익률']
 const transations = ref([]);
 const currentPage = ref(1);
 const itemsPerPage = 10;
