@@ -53,17 +53,24 @@ import DoughnutChart from "@/examples/Charts/DoughnutChart.vue";
 import { ref } from 'vue';
 import axios from 'axios';
 
+// const chartData = ref({
+//   labelsToShow: [],
+//   otherCategory: 0,
+//   datasets: [
+//     {
+//       label: 'Projects',
+//       data: [1,2,3],
+//     }
+//   ],
+// });
+
 const chartData = ref({
-  labelsToShow: [],
-  otherCategory: 0,
-  datasets: [
-    {
-      label: 'Projects',
-      data: [],
-      // backgroundColor: ['#03A9F4', '#3A416F', '#fb8c00', '#a8b8d8', '#e91e63'],
-    }
-  ],
-});
+                  labels: [],
+                  datasets: {
+                    label: 'Projects',
+                    data: []
+                  }
+                });
 
 // onMounted(async () => {
 //   await fetchData();
@@ -72,22 +79,26 @@ const chartData = ref({
 const fetchData = async () => {
   try {
     const response = await axios.get('/api/expenses');
-    const members = response.data;
+    console.log('response:', response);
 
+    const members = response.data;
     const categoryMap = new Map();
     members.forEach(member => {
-      if (categoryMap.has(member.category)) {
-        categoryMap.set(member.category, categoryMap.get(member.category) + member.money);
-      } else {
-        categoryMap.set(member.category, member.money);
-      }
-    });
+          if (categoryMap.has(member.category)) {
+            categoryMap.set(member.category, categoryMap.get(member.category) + member.money);
+          } else {
+            categoryMap.set(member.category, member.money);
+          }
+        });
 
+    // 정렬
     const sortedCategories = Array.from(categoryMap.entries())
       .map(([category, totalMoney]) => ({ label: category, data: totalMoney }))
       .sort((a, b) => b.data - a.data);
 
     const totalMoney = sortedCategories.reduce((acc, category) => acc + category.data, 0);
+
+    // 4개까지 자르기
     const labelsToShow = sortedCategories.slice(0, 4).map(category => ({
       label: category.label,
       data: ((category.data / totalMoney) * 100).toFixed(2),
@@ -117,7 +128,21 @@ const fetchData = async () => {
       ]
     };
 
-    console.log('chartData:', chartData.value);
+  chartData.value = {
+                  labels: [
+                    'Dev.to',
+                    'Creative Tim',
+                    'Bootsnipp',
+                    'Github',
+                    'Codeinwp'
+                  ],
+                  datasets: {
+                    label: 'Projects',
+                    data: [50, 40, 10, 0, 0]
+                  }
+                };
+
+  console.log('chartData:', chartData.value);
   } catch (error) {
     console.error('Failed to fetch data:', error);
   }
