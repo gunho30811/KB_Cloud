@@ -1,14 +1,20 @@
 <template>
-  <div class="container">
+  <div class="layout">
     <Sidenav />
-    <div class="main-content">
-      <div class="py-4 container-fluid">
-        <h1>News</h1>
+    <div class="main-content-container">
+      <h1>News</h1>
+      <div class="content">
+        <div class="main-content">
+          <BlogPost />
+          <BlogPostGrid />
+        </div>
+        <div class="sidebar">
+          <NewsList />
+        </div>
       </div>
-      <BlogPost />
-      <BlogPostGrid />
-      <NewsList />
-      <Rate-world />
+      <div class="footer-content">
+        <RateWorld />
+      </div>
     </div>
   </div>
 </template>
@@ -20,24 +26,45 @@ import BlogPostGrid from "@/components/BlogPostGrid.vue";
 import NewsList from "@/components/NewsList.vue";
 import RateWorld from "@/components/rate_world.vue";
 
-
 export default {
   name: "Info",
   components: {
-    Sidenav, BlogPost, BlogPostGrid, NewsList,RateWorld
+    Sidenav, BlogPost, BlogPostGrid, NewsList, RateWorld
   },
 };
 </script>
 
 <style scoped>
-.main-content {
-  margin-left: 250px;
-  /* Adjust this value to match your sidebar width */
-  padding: 20px;
+html, body, #app {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
 }
 
-.info {
+.layout {
+  display: flex;
+}
+
+.main-content-container {
+  margin-left: 250px; /* Adjust this value to match your sidebar width */
   padding: 20px;
-  text-align: center;
+  width: calc(100% - 250px); /* Adjust this value to match your sidebar width */
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content {
+  width: 70%;
+}
+
+.sidebar {
+  width: 28%; /* Adjusted to fit within the 100% width */
+}
+
+.footer-content {
+  margin-top: 20px;
 }
 </style>

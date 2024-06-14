@@ -1,12 +1,11 @@
 <template>
-  <div class="container">
+  <div class="">
     <sidenav
       v-if="showSidenav"
       :custom_class="color"
       :class="[isRTL ? 'fixed-end' : 'fixed-start']"
     />
     <main
-      style="margin-left: auto;"
       class="main-content position-relative h-100 overflow-x-hidden"
     >
       <!-- nav -->
@@ -77,9 +76,22 @@ export default {
   background-image: linear-gradient(
     195deg,
     #66bb6a 0%,
-    #43a047 100%
   ) !important;
 }
 
+/* Add custom styles here to reset margins */
+html, body, #app{
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+}
+.container{
+  margin:0;
+  padding:0px;
+  width:100%;
+}
 
+.main-content {
+  margin: 0 !important;
+}
 </style>
