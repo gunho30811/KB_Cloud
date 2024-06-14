@@ -2,7 +2,7 @@
   <div class="chart-container">
     <q-card class="my-card">
       <q-card-section>
-        <div class="text-h6">Market Share & Growth</div>
+        <div class="text-h6">월별 투자_사용 내역</div>
       </q-card-section>
       <q-card-section>
         <apexchart type="bar" :options="chartOptions" :series="series" />

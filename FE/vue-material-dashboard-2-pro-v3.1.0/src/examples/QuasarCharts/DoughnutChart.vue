@@ -2,7 +2,7 @@
   <div class="chart-container">
     <q-card class="my-card">
       <q-card-section>
-        <div class="text-h6">Key Competitors</div>
+        <div class="text-h6">투자 수익</div>
       </q-card-section>
       <q-card-section>
         <apexchart type="donut" :options="chartOptions" :series="series" />
@@ -26,7 +26,7 @@ export default {
         chart: {
           type: "donut",
         },
-        labels: ["Product 1", "Competitor 1", "Competitor 2"],
+        labels: ["미국주식", "한국 주식", "채권"],
       },
     };
   },

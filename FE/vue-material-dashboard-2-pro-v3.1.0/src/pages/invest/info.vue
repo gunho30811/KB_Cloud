@@ -8,6 +8,7 @@
       <BlogPost />
       <BlogPostGrid />
       <NewsList />
+      <Rate-world />
     </div>
   </div>
 </template>
@@ -17,11 +18,13 @@ import Sidenav from "@/components/Sidenav.vue";
 import BlogPost from "@/components/BlogPost.vue";
 import BlogPostGrid from "@/components/BlogPostGrid.vue";
 import NewsList from "@/components/NewsList.vue";
+import RateWorld from "@/components/rate_world.vue";
+
 
 export default {
   name: "Info",
   components: {
-    Sidenav, BlogPost, BlogPostGrid, NewsList
+    Sidenav, BlogPost, BlogPostGrid, NewsList,RateWorld
   },
 };
 </script>

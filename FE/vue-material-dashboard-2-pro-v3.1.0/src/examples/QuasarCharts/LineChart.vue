@@ -2,7 +2,7 @@
   <div class="chart-container">
     <q-card class="my-card">
       <q-card-section>
-        <div class="text-h6">Revenue Over Time</div>
+        <div class="text-h6">수익</div>
       </q-card-section>
       <q-card-section>
         <apexchart type="line" :options="chartOptions" :series="series" />

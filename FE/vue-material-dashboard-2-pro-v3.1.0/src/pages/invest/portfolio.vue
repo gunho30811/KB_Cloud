@@ -5,7 +5,7 @@
       <div class="mt-1 row">
         <div class="col-12">
           <h5 class="mb-0">투자 내역</h5>
-                <AssetGraph />
+          <AssetGraph />
         </div>
       </div>
 
@@ -72,24 +72,24 @@
         </div>
       </div>
     </div>
+    <AssetCharts/>
+    <Cfooter/>
   </div>
-  <AssetCharts/>
 </template>
 
 <script>
-// import RateWorld from "@/components/rate_world.vue";
 import Sidenav from "@/components/Sidenav.vue";
 import AssetGraph from "@/components/AssetGraph.vue";
 import MiniStatisticsCard from "@/components/MiniStatisticsCard.vue";
 import transactionList from "@/examples/Cards/transactionList.vue";
 import AssetCharts from "@/examples/QuasarCharts/AssetCharts.vue";
 import AssetComponent from "@/examples/sample/AssetComponent.vue";
-
+import Cfooter from "@/components/Cfooter.vue";
 
 export default {
   name: 'portfolio',
   components: {
-    Sidenav, MiniStatisticsCard, AssetGraph,transactionList,AssetCharts,AssetComponent
+    Sidenav, MiniStatisticsCard, AssetGraph, transactionList, AssetCharts, AssetComponent, Cfooter
   }
 };
 </script>
