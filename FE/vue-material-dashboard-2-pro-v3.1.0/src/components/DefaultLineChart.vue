@@ -26,7 +26,7 @@ export default {
       },
     },
   },
-  mounted() {
+  updated() {
     var chart = document.getElementById(this.id).getContext("2d");
 
     var gradientStroke2 = chart.createLinearGradient(0, 230, 0, 50);
