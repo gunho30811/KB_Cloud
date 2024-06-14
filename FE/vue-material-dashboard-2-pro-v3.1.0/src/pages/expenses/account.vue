@@ -12,7 +12,12 @@
             </button>
           </div>
           <div class="col-12">
-            <orders-list-card title="분류별 지출 내역" :headers="['분류', '날짜', '자산', '금액', '메모']" :lists="products" />
+            <expenseList
+              title="분류별 지출 내역"
+              :headers="['분류', '날짜', '자산', '금액', '메모']"
+              :options="['식료품', '의료', '교통', '취미', '전자제품', '의류', '편의점', '여행', '교육', '외식']"
+              :lists="products"
+            />
           </div>
         </div>
       </div>
@@ -22,13 +27,13 @@
 
 <script>
 import Sidenav from "@/components/Sidenav.vue";
-import OrdersListCard from "@/examples/Cards/OrdersListCard.vue";
+import expenseList from "@/examples/Cards/expenseList.vue";
 
 export default {
   name: "Account",
   components: {
     Sidenav,
-    OrdersListCard,
+    expenseList,
   },
 };
 </script>

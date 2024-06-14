@@ -30,68 +30,12 @@
         </div>
         <div class="mt-4 row">
           <div class="col-12">
-            <div class="card">
-              <div class="table-responsive">
-                <table id="datatable-basic" class="table table-flush">
-                  <thead class="thead-light">
-                    <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        분류
-                      </th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        날짜
-                      </th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        자산
-                      </th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        금액
-                      </th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        메모
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-sm font-weight-normal">편의점</td>
-                      <td class="text-sm font-weight-normal">2024/06/12</td>
-                      <td class="text-sm font-weight-normal">토스뱅크</td>
-                      <td class="text-sm font-weight-normal">6100</td>
-                      <td class="text-sm font-weight-normal">초콜릿</td>
-                    </tr>
-                    <tr>
-                      <td class="text-sm font-weight-normal">의료</td>
-                      <td class="text-sm font-weight-normal">2024/06/11</td>
-                      <td class="text-sm font-weight-normal">현금</td>
-                      <td class="text-sm font-weight-normal">6300</td>
-                      <td class="text-sm font-weight-normal">병원</td>
-                    </tr>
-                    <tr>
-                      <td class="text-sm font-weight-normal">쇼핑</td>
-                      <td class="text-sm font-weight-normal">2024/06/11</td>
-                      <td class="text-sm font-weight-normal">계좌이체</td>
-                      <td class="text-sm font-weight-normal">62000</td>
-                      <td class="text-sm font-weight-normal">옷</td>
-                    </tr>
-                    <tr>
-                      <td class="text-sm font-weight-normal">편의점</td>
-                      <td class="text-sm font-weight-normal">2024/06/10</td>
-                      <td class="text-sm font-weight-normal">토스뱅크</td>
-                      <td class="text-sm font-weight-normal">2000</td>
-                      <td class="text-sm font-weight-normal">간식</td>
-                    </tr>
-                    <tr>
-                      <td class="text-sm font-weight-normal">쇼핑</td>
-                      <td class="text-sm font-weight-normal">2024/06/09</td>
-                      <td class="text-sm font-weight-normal">계좌이체</td>
-                      <td class="text-sm font-weight-normal">33000</td>
-                      <td class="text-sm font-weight-normal">아이패드</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+            <expenseList
+              title="분류별 지출 내역"
+              :headers="['분류', '날짜', '자산', '금액', '메모']"
+              :options="['식료품', '의료', '교통', '취미', '전자제품', '의류', '편의점', '여행', '교육', '외식']"
+              :lists="products"
+            />
           </div>
         </div>
       </div>
@@ -216,12 +160,14 @@
 <script>
 import Sidenav from "@/components/Sidenav.vue";
 import AssetGraph from "@/components/AssetGraph.vue";
+import expenseList from "@/examples/Cards/expenseList.vue";
 
 export default {
   name: "MainPage",
   components: {
     Sidenav,
     AssetGraph,
+    expenseList,
   },
 };
 </script>
