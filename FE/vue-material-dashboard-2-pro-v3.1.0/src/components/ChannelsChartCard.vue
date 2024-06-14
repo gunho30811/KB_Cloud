@@ -9,7 +9,7 @@
           </div>
           <div class="p-3 card-body">
             <div class="card-body d-flex p-1 pt-0">
-              <doughnut-chart class="w-50" :chart="chartData" />
+              <doughnut-chart class="w-80" :chart="chartData" />
               <div class="table-responsive w-50">
                 <table class="table align-items-center mb-0">
                   <tbody>

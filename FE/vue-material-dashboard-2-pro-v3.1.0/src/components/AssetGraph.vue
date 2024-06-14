@@ -21,45 +21,38 @@
           <default-line-chart
             id="line-chart"
             title="Line chart"
-            :chart="{
-              labels: [
-                'Apr',
-                'May',
-                'Jun',
-                'Jul',
-                'Aug',
-                'Sep',
-                'Oct',
-                'Nov',
-                'Dec'
-              ],
-              datasets: [
-                {
-                  label: '남은 자산',
-                  data: [50, 40, 30, 22, 50, 20, 40, 23, 50]
-                },
-                {
-                  label: '투자 이익',
-                  data: [30, 90, 40, 140, 290, 290, 340, 230, 400]
-                }
-              ]
-            }"
+            :chart="chartData"
           />
         </div>
       </div>
     </div>
   </template>
   
-  <script>
+<script setup>
   import DefaultLineChart from "@/components/DefaultLineChart.vue";
+  import axios from "axios";
+  import { ref } from 'vue';
   
-  export default {
-    name: "AssetGraph",
-    components: {
-      DefaultLineChart,
-    },
+  const chartData = ref({});
+
+
+  const fetchAssetData = async () => {
+    try {
+      const response = await axios.get('/api/assets');
+      const assets = response.data;
+
+      chartData.value = {labels : assets.map(asset => asset.month), 
+        datasets : [{data:assets.map(asset => asset.remaining_assets)},
+                    {data:assets.map(asset => asset.investment_profit)}
+        ]
+      };
+    } catch (error) {
+      console.error('Failed to fetch asset data:', error);
+    }
   };
-  </script>
+
+  fetchAssetData();
+</script>
   
   <style scoped>
   </style>
