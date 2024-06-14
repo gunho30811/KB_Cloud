@@ -50,7 +50,7 @@
 
 <script setup>
 import DoughnutChart from "@/examples/Charts/DoughnutChart.vue";
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import axios from 'axios';
 
 const chartData = ref({
@@ -60,14 +60,14 @@ const chartData = ref({
     {
       label: 'Projects',
       data: [],
-      backgroundColor: ['#03A9F4', '#3A416F', '#fb8c00', '#a8b8d8', '#e91e63'],
+      // backgroundColor: ['#03A9F4', '#3A416F', '#fb8c00', '#a8b8d8', '#e91e63'],
     }
   ],
 });
 
-onMounted(async () => {
-  await fetchData();
-});
+// onMounted(async () => {
+//   await fetchData();
+// });
 
 const fetchData = async () => {
   try {
@@ -88,17 +88,40 @@ const fetchData = async () => {
       .sort((a, b) => b.data - a.data);
 
     const totalMoney = sortedCategories.reduce((acc, category) => acc + category.data, 0);
-    chartData.value.labelsToShow = sortedCategories.slice(0, 4).map(category => ({
+    const labelsToShow = sortedCategories.slice(0, 4).map(category => ({
       label: category.label,
       data: ((category.data / totalMoney) * 100).toFixed(2),
     }));
+    // chartData.value = sortedCategories.slice(0, 4).map(category => ({
+    //   label: category.label,
+    //   data: ((category.data / totalMoney) * 100).toFixed(2),
+    // }));
+    // chartData.value.labelsToShow = sortedCategories.slice(0, 4).map(category => ({
+    //   label: category.label,
+    //   data: ((category.data / totalMoney) * 100).toFixed(2),
+    // }));
 
     const otherCategories = sortedCategories.slice(4);
-    chartData.value.otherCategory = otherCategories.reduce((acc, category) => acc + ((category.data / totalMoney) * 100), 0).toFixed(2);
+    // chartData.value.otherCategory = otherCategories.reduce((acc, category) => acc + ((category.data / totalMoney) * 100), 0).toFixed(2);
+    // otherCategory.value = otherCategories.reduce((acc, category) => acc + ((category.data / totalMoney) * 100), 0).toFixed(2);
+    const otherCategory = otherCategories.reduce((acc, category) => acc + ((category.data / totalMoney) * 100), 0).toFixed(2);
 
-    chartData.value.datasets[0].data = chartData.value.labelsToShow.map(item => item.data);
+    // chartData.value.datasets[0].data = chartData.value.labelsToShow.map(item => item.data);
+    chartData.value = {
+      // labels: sortedCategories.slice(0, 4).map(category => category.label),
+      labelsToShow,
+      otherCategory,
+      datasets: [
+        // { data: labelsToShow.map(item => item.data)}
+        {data: labelsToShow.map(item => parseFloat(item.data))}
+      ]
+    };
+
+    console.log('chartData:', chartData.value);
   } catch (error) {
     console.error('Failed to fetch data:', error);
   }
+
 };
+fetchData();
 </script>

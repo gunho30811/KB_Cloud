@@ -46,6 +46,9 @@
                     {data:assets.map(asset => asset.investment_profit)}
         ]
       };
+//      chartData.value.labels = assets.map(asset => asset.month);
+  //    chartData.value.datasets[0].data = assets.map(asset => asset.remaining_assets);
+    //  chartData.value.datasets[1].data = assets.map(asset => asset.investment_profit);
     } catch (error) {
       console.error('Failed to fetch asset data:', error);
     }

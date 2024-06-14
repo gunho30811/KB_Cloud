@@ -29,7 +29,7 @@ export default {
       },
     },
   },
-  mounted() {
+  updated() {
     // Doughnut chart
     var ctx = document.getElementById(this.id).getContext("2d");
 
