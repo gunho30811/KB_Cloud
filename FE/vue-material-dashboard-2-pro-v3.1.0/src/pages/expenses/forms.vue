@@ -14,25 +14,21 @@
           <div class="card-body">
             <div class="row mt-4">
               <div class="col-3">
-                <Datepicker
-                  v-model="dateValue"
-                  format="yyyy-MM-dd"
-                  placeholder="날짜 선택"
-                />
+                <input type="date" class="form-control"/>
               </div>
               <div class="col-3">
-                <material-input id="price" variant="dynamic" label="자산" v-model="assetValue" />
+                <MaterialInput id="asset" variant="dynamic" label="자산" v-model:value="assetValue" />
               </div>
               <div class="col-3">
-                <material-input id="quantity" variant="dynamic" label="금액" v-model="amountValue" />
+                <MaterialInput id="amount" variant="dynamic" label="금액" v-model:value="amountValue" />
               </div>
               <div class="col-3">
-                <material-input id="quantity" variant="dynamic" label="분류" v-model="categoryValue" />
+                <MaterialInput id="category" variant="dynamic" label="분류" v-model:value="categoryValue" />
               </div>
             </div>
             <div class="row mt-4">
               <div class="col-12">
-                <material-input id="name" variant="dynamic" label="메모" v-model="memoValue" />
+                <MaterialInput id="memo" variant="dynamic" label="메모" v-model:value="memoValue" />
               </div>
             </div>
             <div class="d-flex justify-content-end">
@@ -55,7 +51,7 @@ export default {
   name: "Account",
   components: {
     Sidenav,
-    MaterialInput
+    MaterialInput,
   },
   data() {
     return {

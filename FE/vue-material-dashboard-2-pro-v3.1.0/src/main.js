@@ -6,8 +6,6 @@ import "./assets/css/nucleo-icons.css";
 import "./assets/css/nucleo-svg.css";
 // import VueSweetalert2 from "vue-sweetalert2";
 import MaterialDashboard from "./material-dashboard";
-import VueDatePicker from '@vuepic/vue-datepicker';
-import '@vuepic/vue-datepicker/dist/main.css'
 
 
 const appInstance = createApp(App);
@@ -21,5 +19,4 @@ if (process.env.NODE_ENV === 'development') {
 appInstance.use(router);
 appInstance.use(MaterialDashboard);
 appInstance.mount("#app");
-app.component('VueDatePicker', VueDatePicker);
 
