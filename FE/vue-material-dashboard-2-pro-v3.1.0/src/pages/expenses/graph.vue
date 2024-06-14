@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Sidenav />
-      <div class="main content py-4 container-fluid col-9">
+      <div class="main-content py-4 container-fluid col-9">
         <h1>Extenses Page</h1>
       <div class="row">
         <h5 class="mb-0">분류별 지출 내역</h5>
