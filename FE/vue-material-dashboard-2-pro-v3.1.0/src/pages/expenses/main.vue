@@ -50,102 +50,12 @@
         </div>
         <div class="mt-4 row">
           <div class="col-12">
-            <div class="card">
-              <div class="table-responsive">
-                <table id="datatable-basic" class="table table-flush">
-                  <thead class="thead-light">
-                    <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        거래일자
-                      </th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        종목코드
-                      </th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        종목명
-                      </th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        구분
-                      </th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        거래수량
-                      </th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        거래단가
-                      </th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        거래금액
-                      </th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        수익률
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-sm font-weight-normal">2024/06/10</td>
-                      <td class="text-sm font-weight-normal">AAPL</td>
-                      <td class="text-sm font-weight-normal">애플</td>
-                      <td class="text-sm font-weight-normal">현금</td>
-                      <td class="text-sm font-weight-normal">1</td>
-                      <td class="text-sm font-weight-normal">$207.16</td>
-                      <td class="text-sm font-weight-normal">$207.16</td>
-                      <td :class="{'text-red': 3.73 > 0, 'text-blue': 3.73 < 0}">
-                        3.73
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-sm font-weight-normal">2024/06/09</td>
-                      <td class="text-sm font-weight-normal">TSLA</td>
-                      <td class="text-sm font-weight-normal">테슬라</td>
-                      <td class="text-sm font-weight-normal">현금</td>
-                      <td class="text-sm font-weight-normal">1</td>
-                      <td class="text-sm font-weight-normal">$170.58</td>
-                      <td class="text-sm font-weight-normal">$170.58</td>
-                      <td :class="{'text-red': -9.12 > 0, 'text-blue': -9.12 < 0}">
-                        -9.12
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-sm font-weight-normal">2024/06/09</td>
-                      <td class="text-sm font-weight-normal">NVDA</td>
-                      <td class="text-sm font-weight-normal">엔비디아</td>
-                      <td class="text-sm font-weight-normal">현금</td>
-                      <td class="text-sm font-weight-normal">1</td>
-                      <td class="text-sm font-weight-normal">$120.92</td>
-                      <td class="text-sm font-weight-normal">$120.92</td>
-                      <td :class="{'text-red': 0.13 > 0, 'text-blue': 0.13 < 0}">
-                        0.13
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-sm font-weight-normal">2024/06/09</td>
-                      <td class="text-sm font-weight-normal">035720</td>
-                      <td class="text-sm font-weight-normal">카카오</td>
-                      <td class="text-sm font-weight-normal">현금</td>
-                      <td class="text-sm font-weight-normal">2</td>
-                      <td class="text-sm font-weight-normal">40000</td>
-                      <td class="text-sm font-weight-normal">80000</td>
-                      <td :class="{'text-red': -10.12 > 0, 'text-blue': -10.12 < 0}">
-                        -10.12
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-sm font-weight-normal">2024/06/09</td>
-                      <td class="text-sm font-weight-normal">NVDA</td>
-                      <td class="text-sm font-weight-normal">엔비디아</td>
-                      <td class="text-sm font-weight-normal">현금</td>
-                      <td class="text-sm font-weight-normal">1</td>
-                      <td class="text-sm font-weight-normal">$120.92</td>
-                      <td class="text-sm font-weight-normal">$120.92</td>
-                      <td :class="{'text-red': 20.93 > 0, 'text-blue': 20.93 < 0}">
-                        20.93
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+            <transactionList
+              title="분류별 지출 내역"
+              :headers="['분류', '날짜', '자산', '금액', '메모']"
+              :options="['식료품', '의료', '교통', '취미', '전자제품', '의류', '편의점', '여행', '교육', '외식']"
+              :lists="products"
+            />
           </div>
         </div>
       </div>
@@ -161,6 +71,7 @@
 import Sidenav from "@/components/Sidenav.vue";
 import AssetGraph from "@/components/AssetGraph.vue";
 import expenseList from "@/examples/Cards/expenseList.vue";
+import transactionList from "@/examples/Cards/transactionList.vue";
 
 export default {
   name: "MainPage",
@@ -168,6 +79,7 @@ export default {
     Sidenav,
     AssetGraph,
     expenseList,
+    transactionList,
   },
 };
 </script>
