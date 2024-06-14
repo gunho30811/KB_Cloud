@@ -14,7 +14,11 @@
           <div class="card-body">
             <div class="row mt-4">
               <div class="col-3">
-                <material-input id="collection" variant="dynamic" label="날짜" v-model="dateValue" />
+                <Datepicker
+                  v-model="dateValue"
+                  format="yyyy-MM-dd"
+                  placeholder="날짜 선택"
+                />
               </div>
               <div class="col-3">
                 <material-input id="price" variant="dynamic" label="자산" v-model="assetValue" />
