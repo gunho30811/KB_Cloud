@@ -10,7 +10,7 @@
           <div class="p-3 card-body">
             <div class="card-body d-flex p-1 pt-0">
               <doughnut-chart class="w-50" :chart="chartData" />
-              <div class="table-responsive w-20">
+              <div class="table-responsive w-50">
                 <table class="table align-items-center mb-0">
                   <tbody>
                     <tr v-for="(item, index) in chartData.labelsToShow" :key="index">
@@ -94,9 +94,7 @@ const fetchData = async () => {
     }));
 
     const otherCategories = sortedCategories.slice(4);
-    if (otherCategories.length > 0) {
-      chartData.value.otherCategory = otherCategories.reduce((acc, category) => acc + ((category.data / totalMoney) * 100), 0).toFixed(2);
-    }
+    chartData.value.otherCategory = otherCategories.reduce((acc, category) => acc + ((category.data / totalMoney) * 100), 0).toFixed(2);
 
     chartData.value.datasets[0].data = chartData.value.labelsToShow.map(item => item.data);
   } catch (error) {
