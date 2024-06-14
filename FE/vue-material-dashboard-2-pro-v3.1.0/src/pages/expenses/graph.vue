@@ -42,17 +42,8 @@
         </div>
       </div>
     </div>
-    <div class="mt-4 row">
-      <div class="col-12">
-        <expenseList
-          title="월간 누적 지출 비교"
-          :headers="['거래일자', '종목코드', '종목명', '구분', '거래수량', '거래단가', '거래금액', '수익률']"
-          :options="['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']"
-          :lists="products"
-        />
-      </div>
+    
     </div>
-  </div>
   </div>
   
 </template>
