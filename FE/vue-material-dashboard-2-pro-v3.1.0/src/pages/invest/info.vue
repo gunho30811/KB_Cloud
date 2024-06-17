@@ -46,7 +46,7 @@ html, body, #app {
 }
 
 .main-content-container {
-  margin-left: 250px; /* Adjust this value to match your sidebar width */
+  margin-left: 270px; /* Adjust this value to match your sidebar width */
   padding: 20px;
   width: calc(100% - 250px); /* Adjust this value to match your sidebar width */
 }
