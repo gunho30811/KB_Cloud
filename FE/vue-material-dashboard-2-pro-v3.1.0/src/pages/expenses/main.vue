@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <Sidenav />
+    <div class="sidenav-wrapper">
+      <Sidenav />
+    </div>
 
     <!--자산 내역 그래프-->
     <div class="main-content py-4 container-fluid col-9">
@@ -75,9 +77,31 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidenav-wrapper {
+  width: 200px; /* Adjusted to a smaller width */
+}
+
 .main-content {
-  margin-left: 250px; /* Adjust this value to match your sidebar width */
+  flex: 1;
   padding: 20px;
+  margin-left: 200px; /* Adjusted to match the sidebar width */
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .main-content {
+    margin-left: 0; /* No margin-left in smaller screens */
+  }
+  .sidenav-wrapper {
+    width: 100%;
+  }
 }
 .text-red {
   color: red;
