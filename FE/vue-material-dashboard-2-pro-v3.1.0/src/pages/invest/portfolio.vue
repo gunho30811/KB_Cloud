@@ -3,7 +3,7 @@
     <div class="sidenav-wrapper">
       <Sidenav />
     </div>
-    <div class="main-content">
+    <div class="main-content py-4 container-fluid">
       <h1>Portfolio</h1>
         <div class="mt-1 row">
           <div class="col-12">
@@ -66,7 +66,7 @@
         <AssetComponent />
         <div class="py-4 container-fluid">
           <div class="col-md-6">
-            <h5 class="mb-0">투자 내역</h5>
+            <h5 class="mb-0 mt-4">투자 내역</h5>
             <p class="mb-0 text-sm">
               투자 상세 내역을 확인하세요.
             </p>
@@ -129,5 +129,7 @@ export default {
     width: 100%;
   }
 }
+
+
 
 </style>
