@@ -3,7 +3,7 @@
     <q-page-container>
       <q-layout>
         <q-page-container>
-          <h4>투자 내역 그래프</h4>
+          <h5>투자 내역 그래프</h5>
           <q-page padding>
             <div class="charts-row">
               <bar-chart class="chart-card" />
@@ -41,15 +41,15 @@ export default {
   padding: 20px;
 }
 
-h4{
-  margin-left: 200px;
+h5{
+  margin-left: 30px;
 }
 
 .charts-row {
   display: flex;
   /* justify-content: space-between; 카드를 더 균형있게 배치 */
   margin-bottom: 20px;
-  margin-left: 200px;
+  margin-left: 70px;
 }
 
 .chart-card {

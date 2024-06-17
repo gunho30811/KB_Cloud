@@ -11,7 +11,7 @@
         <div class="col-md-6">
           <h5 class="mb-0">자산 내역</h5>
           <p class="mb-0 text-sm">
-            수입/지출 내역과 투자 내역을 확인하세요.
+            지출 내역과 투자 내역을 확인하세요.
           </p>
         </div>
       </div>

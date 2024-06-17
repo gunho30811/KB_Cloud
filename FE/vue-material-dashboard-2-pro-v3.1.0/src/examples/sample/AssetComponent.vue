@@ -1,6 +1,6 @@
 <template>
     <div class="assets">
-      <h2>자산</h2>
+      <h5 class="mb-4">자산</h5>
       <div class="asset-container">
         <AssetCard
           title="수익 💰"
@@ -46,20 +46,10 @@
   </script>
   
   <style scoped>
-  .assets {
-    padding: 20px;
-  }
-  
   .asset-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px; /* 간격을 더 넓게 설정 */
-  }
-  
-  h2 {
-    font-size: 26px;
-    margin-bottom: 24px;
-    color: #333;
+    justify-content: space-between;
   }
   </style>
   
