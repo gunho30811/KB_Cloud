@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <Sidenav />
+    <div class="sidenav-wrapper">
+      <Sidenav />
+    </div>
     <div class="main-content py-4 container-fluid">
       <h1>Forms</h1>
       <!-- Account page content -->
@@ -96,7 +98,7 @@ const saveData = async ()=>{
   flex-direction: row;
 }
 
-.sidenav {
+.sidenav-wrapper {
   width: 200px; /* Adjusted to a smaller width */
 }
 
@@ -111,9 +113,9 @@ const saveData = async ()=>{
     flex-direction: column;
   }
   .main-content {
-    margin-left: 0;
+    margin-left: 0; /* No margin-left in smaller screens */
   }
-  .sidenav {
+  .sidenav-wrapper {
     width: 100%;
   }
 }
