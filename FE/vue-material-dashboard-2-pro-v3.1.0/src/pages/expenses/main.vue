@@ -52,10 +52,8 @@
         </div>
       </div>
     </div>
-
+    <Cfooter/>
   </div>
-
-  
 </div>
 </template>
 
@@ -64,6 +62,7 @@ import Sidenav from "@/components/Sidenav.vue";
 import AssetGraph from "@/components/AssetGraph.vue";
 import expenseList from "@/examples/Cards/expenseList.vue";
 import transactionList from "@/examples/Cards/transactionList.vue";
+import Cfooter from "@/components/Cfooter.vue";
 
 export default {
   name: "MainPage",
@@ -72,6 +71,7 @@ export default {
     AssetGraph,
     expenseList,
     transactionList,
+    Cfooter,
   },
 };
 </script>

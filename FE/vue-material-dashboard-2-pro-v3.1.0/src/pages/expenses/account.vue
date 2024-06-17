@@ -23,6 +23,7 @@
           </div>
         </div>
       </div>
+      <Cfooter/>
     </div>
   </div>
 </template>
@@ -30,12 +31,14 @@
 <script>
 import Sidenav from "@/components/Sidenav.vue";
 import expenseList from "@/examples/Cards/expenseList.vue";
+import Cfooter from "@/components/Cfooter.vue";
 
 export default {
   name: "Account",
   components: {
     Sidenav,
     expenseList,
+    Cfooter,
   },
 };
 </script>

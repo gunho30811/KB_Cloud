@@ -44,6 +44,7 @@
         </div>
       </div>
     </div>
+    <Cfooter />
     
     </div>
   </div>
@@ -55,6 +56,7 @@ import Sidenav from "@/components/Sidenav.vue";
 import ChannelsChartCard from "@/components/ChannelsChartCard.vue";
 import RevenueChartCard from "@/components/RevenueChartCard.vue";
 import expenseList from "@/examples/Cards/expenseList.vue";
+import Cfooter from "@/components/Cfooter.vue";
 
 
 export default {
@@ -64,6 +66,7 @@ export default {
     ChannelsChartCard,
     RevenueChartCard,
     expenseList,
+    Cfooter,
   },
 };
 </script>

@@ -41,6 +41,7 @@
           </div>
         </div>
       </div>
+      <Cfooter />
     </div>
   </div>
 </template>
@@ -48,6 +49,7 @@
 <script setup>
 import Sidenav from "@/components/Sidenav.vue";
 import MaterialInput from "@/components/MaterialInput.vue";
+import Cfooter from "@/components/Cfooter.vue";
 import axios from 'axios';
 import { ref, onMounted } from 'vue';
 

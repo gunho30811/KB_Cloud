@@ -12,6 +12,7 @@
           </div>
         </div>
       </div>
+      <Cfooter/>
     </div>
   </div>
 </template>
@@ -19,10 +20,11 @@
 <script>
 import CalendarComponent from "@/components/calendar.vue";
 import Sidenav from "@/components/Sidenav.vue";
+import Cfooter from "@/components/Cfooter.vue";
 
 export default {
   name: "CalendarPage",
-  components: { CalendarComponent, Sidenav },
+  components: { CalendarComponent, Sidenav, Cfooter },
   data() {
     return {
       events: [

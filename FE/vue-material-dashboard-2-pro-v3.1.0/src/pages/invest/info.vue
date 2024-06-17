@@ -15,6 +15,7 @@
       <div class="footer-content">
         <RateWorld />
       </div>
+      <Cfooter/>
     </div>
   </div>
 </template>
@@ -25,11 +26,12 @@ import BlogPost from "@/components/BlogPost.vue";
 import BlogPostGrid from "@/components/BlogPostGrid.vue";
 import NewsList from "@/components/NewsList.vue";
 import RateWorld from "@/components/rate_world.vue";
+import Cfooter from "@/components/Cfooter.vue";
 
 export default {
   name: "Info",
   components: {
-    Sidenav, BlogPost, BlogPostGrid, NewsList, RateWorld
+    Sidenav, BlogPost, BlogPostGrid, NewsList, RateWorld, Cfooter
   },
 };
 </script>
