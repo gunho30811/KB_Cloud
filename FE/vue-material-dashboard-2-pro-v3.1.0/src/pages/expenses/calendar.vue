@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <Sidenav />
+    <div class="sidenav-wrapper">
+      <Sidenav />
+    </div>
     <div class="main-content py-4 container-fluid">
       <h1>Calendar</h1>
       <div class="row">
@@ -39,7 +41,7 @@ export default {
   flex-direction: row;
 }
 
-.sidenav {
+.sidenav-wrapper {
   width: 200px; /* Adjusted to a smaller width */
 }
 
@@ -54,9 +56,9 @@ export default {
     flex-direction: column;
   }
   .main-content {
-    margin-left: 0;
+    margin-left: 0; /* No margin-left in smaller screens */
   }
-  .sidenav {
+  .sidenav-wrapper {
     width: 100%;
   }
 }
