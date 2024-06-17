@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <Sidenav />
+    <div class="sidenav-wrapper">
+      <Sidenav />
+    </div>
     <div class="main-content">
       <div class="py-4 container-fluid">
         <h1>Account Page</h1>
@@ -44,7 +46,7 @@ export default {
   flex-direction: row;
 }
 
-.sidenav {
+.sidenav-wrapper {
   width: 200px; /* Adjusted to a smaller width */
 }
 
@@ -59,14 +61,11 @@ export default {
     flex-direction: column;
   }
   .main-content {
-    margin-left: 0;
+    margin-left: 0; /* No margin-left in smaller screens */
   }
-  .sidenav {
+  .sidenav-wrapper {
     width: 100%;
   }
 }
 
-.Account_box {
-  margin-left: 20px; /* Adjusted to a smaller margin */
-}
 </style>
